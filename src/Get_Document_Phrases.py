@@ -63,8 +63,9 @@ class dataset:
             dummy = pickle.load(f)
         setattr(self,'citations_dict',dummy)
   
-        
-
+        if not os.path.isdir("../bin/Fields"):
+            os.mkdir("../bin/Fields")
+            
         if not os.path.isdir("../bin/Fields/"+field):
             print('Creating directory for',field)
             os.mkdir("../bin/Fields/"+field)

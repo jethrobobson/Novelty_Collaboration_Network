@@ -34,6 +34,9 @@ class read_corpus:
                 print('File extension for modified parameters:',ext)
         #print('Reading in all raw data')
         
+        if not os.path.isdir("../bin/Fields"):
+            os.mkdir("../bin/Fields")
+        
         if not os.path.isdir("../bin/Fields/"+field):
             print('Creating directory for',field)
             os.mkdir("../bin/Fields/"+field)
